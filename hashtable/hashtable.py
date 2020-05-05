@@ -16,6 +16,7 @@ class HashTable:
 
     Implement this.
     """
+    hash_table = [None] * hash_table_size
 
     def fnv1(self, key):
         """
@@ -36,7 +37,7 @@ class HashTable:
         Take an arbitrary key and return a valid integer index
         between within the storage capacity of the hash table.
         """
-        #return self.fnv1(key) % self.capacity
+        # return self.fnv1(key) % self.capacity
         return self.djb2(key) % self.capacity
 
     def put(self, key, value):
@@ -73,6 +74,7 @@ class HashTable:
 
         Implement this.
         """
+
 
 if __name__ == "__main__":
     ht = HashTable(2)
